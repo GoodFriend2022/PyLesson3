@@ -10,10 +10,29 @@
 # 1 2 1 8 9 6 5 4 3 4
 # Вывод: 6
 
-import random
+from Functions import CreateArray
 
+def FindNearNumber(array, number):
+    diff = number
+    for i in array:
+        if number > i:
+            if diff >= number - i:
+                diff = number - i
+                nearNumber = i
+        elif number < i:
+            if diff > i - number:
+                diff = i - number
+                nearNumber = i
+        else: return i
+    return nearNumber
 
+n = int(input('Введите требуемое количество элементов > '))
+x = int(input('Введите искомое число > '))
+numbers = CreateArray(n)
+print(numbers)
+print(f'Введенное Вами число ближе всего к числу {FindNearNumber(numbers, x)} из массива')
 
-
+# numbers2 = [1, 3, 5, 8, 9, 12, 13]
+# print(f'Введенное Вами число ближе всего к числу {FindNearNumber(numbers2, x)} из массива')
 
 
