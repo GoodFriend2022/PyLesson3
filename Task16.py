@@ -8,13 +8,8 @@
 # Ввод: 1
 # 1 2 1 2 2
 # Вывод: 2
-import random
 
-def CreateArray(lengthArray):
-    array = []
-    for i in range(lengthArray):
-        array.append(random.randint(1, lengthArray//2))
-    return array
+from Functions import CreateArray
 
 def FindNumber(array, number):
     count = 0
