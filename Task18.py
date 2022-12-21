@@ -29,8 +29,9 @@ def FindNearNumber(array, number):
 n = int(input('Введите требуемое количество элементов > '))
 x = int(input('Введите искомое число > '))
 numbers = CreateArray(n)
+uniqueNumbers = set(CreateArray(n))
 print(numbers)
-print(f'Введенное Вами число ближе всего к числу {FindNearNumber(numbers, x)} из массива')
+print(f'Введенное Вами число ближе всего к числу {FindNearNumber(uniqueNumbers, x)} из массива')
 
 # numbers2 = [1, 3, 5, 8, 9, 12, 13]
 # print(f'Введенное Вами число ближе всего к числу {FindNearNumber(numbers2, x)} из массива')
